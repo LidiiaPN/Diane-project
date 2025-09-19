@@ -1,0 +1,109 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+
+.contact {
+    margin: 0 auto;
+    padding: 30px 20px 50px 20px;
+    border-top: 1px solid $text-color-primary;
+    @media (min-width: $bp-lg) {
+      max-width: 1290px;
+      display: flex;
+      gap: 40px;
+      padding: 100px 70px;
+    }
+  }
+  .contact__title {
+    color: $text-color-member-card;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 70px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    @media (min-width: $bp-md) {
+      font-family: Gilroy;
+      font-size: 150px;
+      font-weight: 300;
+    }
+    @media (min-width: $bp-lg) {
+      flex: 50%;
+      font-size: 145px;
+    }
+  }
+  .contact__section {
+    @include flex-column;
+    gap: 30px;
+    @media (min-width: $bp-lg) {
+      justify-content: flex-start;
+    }
+  }
+  .contact__section-text {
+    color: $text-color-primary;
+    font-family: Gilroy;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    @media (min-width: $bp-md) {
+      font-size: 64px;
+    }
+    @media (min-width: $bp-lg) {
+      font-size: 40px;
+      text-align: left;
+    }
+  }
+  .contact__section-descr {
+    color: $text-color-primary;
+    font-family: Gilroy;
+    font-size: 30px;
+    font-weight: 400;
+    align-items: center;
+    text-align: center;
+    @media (min-width: $bp-md) {
+      font-size: 34px;
+    }
+    @media (min-width: $bp-lg) {
+      text-align: start;
+    }
+  }
+
+.btn {
+    width: 100%;
+    background-color: $text-color-primary;
+    color: #fff;
+    padding: 10px 50px 10px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    position: relative;
+    @media (min-width: $bp-lg) {
+      padding-right: 53px;
+      justify-content: flex-start;
+    }
+    &::after {
+      @include before-after;
+      display: block;
+      background-image: url(../../img/arrow.svg);
+      transform: translateY(-50%);
+      width: 24px;
+      height: 33px;
+      top: 50%;
+      right: 30%;
+      @media (min-width: $bp-md) {
+        height: 20px;
+        right: 15%;
+      }
+    }
+  }
+  .contact__btn {
+    width: 100%;
+    @media (min-width: $bp-md) {
+      width: 195px;
+      margin: 0 auto;
+    }
+    @media (min-width: $bp-lg) {
+      background-size: 30%;
+      justify-content: start;
+      margin: 0;
+    }
+  }

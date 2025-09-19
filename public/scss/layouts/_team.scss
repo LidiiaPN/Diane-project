@@ -1,0 +1,180 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.team {
+    background: $background-color-primary;
+    padding: 30px 20px 50px;
+
+    @media (min-width: $bp-md) {
+        padding: 30px 30px 50px;
+    }
+
+    @media (min-width: $bp-lg) {
+        padding: 50px 70px;
+    }
+}
+
+.team-container{
+    @include flex-gap(column, 30px);
+
+    @media (min-width: $bp-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $bp-lg) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    } 
+    
+}
+
+.team__title {
+    color: $text-color-primary;
+    font-family: Gilroy;
+    font-size: 80px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (min-width: $bp-md) {
+        font-size: 150px;
+    }
+
+    @media (min-width: $bp-lg) {
+        font-size: 212px;
+        letter-spacing: 8.48px;    
+        margin-bottom: 50px;    
+    }
+}
+
+.member-card {
+    @include flex-gap(column, 15px);
+
+    @media (min-width: $bp-md) {
+        width: 315px;
+    }
+
+    @media (min-width: 850px) {
+        width: 375px;
+    }
+    
+    @media (min-width: 962px) {
+        width: 446px;
+    }
+
+    @media (min-width: $bp-lg) {
+        width: 245px;
+    }
+
+    @media (min-width: 1300px) {
+        width: 275px;
+    }
+
+    @media (min-width: 1400px) {
+        width: 305px;
+    }
+
+    @media (min-width: 1920px) {
+        width: 436px;
+    }
+}
+
+.member-card__text-wrapper {
+    @include flex-gap(column,5px);
+    align-items: center;
+}
+
+.member-card__name {
+    color: $text-color-member-card;
+    font-family: Gilroy;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    @media (min-width: $bp-lg) {
+        font-size: 26px;
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 30px;
+    }
+}
+
+.member-card__position {
+    color: $text-color-member-card;
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.member-card__image {
+    object-fit: cover;
+    height: 507px;
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.join-team {
+
+    @media (min-width: $bp-md) {
+        align-items: flex-start;
+        grid-column: 1 / span 2;
+    }
+
+    @media (min-width: $bp-lg) {
+        grid-column: 3 / span 2;
+        align-self: center;
+    }
+}
+
+.join-team__title {
+    color: $text-color-member-card;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    @media (min-width: $bp-md) {
+        text-align: start;
+    }
+}
+
+.join-team__paragraph {
+    color: $text-color-member-card;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    @media (min-width: $bp-md) {
+        text-align: unset;
+    }
+}
+
+.join-team__button {
+    padding: 15px 60px 15px 30px;
+    background: $background-color-about-me-section;
+    border-radius: 50px;
+    color: $text-color-white;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: capitalize;
+    position: relative;
+
+    &::after {
+        content: '';
+        background-image: url("../../img/logos/arrow-right.svg");
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 16px;
+        position: absolute;
+        transform: translateX(25%);
+        top: 17px;
+    }
+}

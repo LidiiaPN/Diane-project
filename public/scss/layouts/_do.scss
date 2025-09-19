@@ -1,0 +1,135 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+
+.do__title {
+    color: $text-color-primary;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 500px;
+    margin-bottom: 40px;
+    @media (min-width: $bp-md) {
+      font-size: 130px;
+      margin-top: 800px;
+      font-weight: 150px;
+    }
+  
+    @media (min-width: $bp-lg) {
+      font-size: 90px;
+      margin-left: 700px;
+      margin-top: 40px;
+    }
+  }
+  .do {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid $text-color-black;
+    @include flex-column;
+    justify-content: center;
+    background-image: url("../../img/do.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 478px;
+    @media (min-width: $bp-md) {
+      background-size: 100% 771px;
+    }
+    @media (min-width: $bp-lg) {
+      background-size: 52%;
+      height: auto;
+      justify-content: end;
+    }
+  }
+  .do__activities {
+    padding: 0 20px 20px;
+    @include flex-column;
+    gap: 60px;
+    @media (min-width: $bp-md) {
+      padding: 0 30px 40px 50px;
+      gap: 80px;
+    }
+    @media (min-width: $bp-lg) {
+      padding: 0 30px 40px 50px;
+      width: 50%;
+      margin-left: 52%;
+    }
+    @media (min-width: 1920px) {
+      width: 30%;
+      margin-left: 52%;
+    }
+    @media (min-width: 2220px) {
+      width: 20%;
+    }
+  }
+  .do__activities-title {
+    color: $text-color-black;
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    @media (min-width: $bp-md) {
+      font-size: 44px;
+    }
+    @media (min-width: $bp-lg) {
+      font-size: 44px;
+      line-height: 48px;
+    }
+  
+    &::before {
+      content: "01";
+      margin-right: 10px;
+      font-family: Gilroy;
+      font-weight: 100;
+    }
+  }
+  .do__activities-item {
+    position: relative;
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      height: 1px;
+      width: 100%;
+      background: $text-color-primary;
+      left: 0;
+      bottom: -32px;
+      @media (min-width: $bp-md) {
+        bottom: -40px;
+      }
+    }
+  }
+  
+  .do__activities-item:nth-child(4)::after {
+    display: none;
+  }
+  
+  %activities-title {
+    font-family: Gilroy;
+    margin-right: 10px;
+    font-weight: 100;
+  }
+  
+  .do__activities-item:nth-child(2) .do__activities-title::before {
+    content: "02";
+    @extend %activities-title;
+  }
+  .do__activities-item:nth-child(3) .do__activities-title::before {
+    content: "03";
+    @extend %activities-title;
+  }
+  .do__activities-item:nth-child(4) .do__activities-title::before {
+    content: "04";
+    @extend %activities-title;
+  }
+  
+  .do__activities-descr {
+    color: $text-color-black;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  

@@ -1,0 +1,41 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.logos {
+    background: $background-color-primary;
+    padding: 30px 20px;
+
+    @media (min-width: $bp-md) {
+        padding: 40px 30px;
+    }
+
+    @media (min-width: $bp-lg) {
+        padding: 70px;
+    }
+}
+
+.navigation-logos__list {
+    @include flex-gap(row, 20px);
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (min-width: $bp-lg) {
+        @include flex-gap(row, 40px);
+    }
+}
+
+.navigation-logos__item {
+    height: 70px;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: #fff;
+    align-self: center;
+
+    &:nth-of-type(5) {
+        padding-top: 18px;
+    }
+}
+
+
+
+

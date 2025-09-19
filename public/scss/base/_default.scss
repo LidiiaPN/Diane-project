@@ -1,0 +1,14 @@
+@import "../abstracts/variables";
+
+* {
+    font-family: $font-style-primary;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    font-family: Gilroy, sans-serif;
+    background-color: $background-color-primary;
+}
+

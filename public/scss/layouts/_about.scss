@@ -1,0 +1,98 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.about {
+    background: $background-color-primary;
+    @include flex-gap(column);
+   
+    @media (min-width: $bp-lg) {
+        @include flex-gap(row);
+        padding: 70px 0;
+        height: 404px;
+    } 
+}
+
+.about__title-text {
+    background: $background-color-primary;
+    padding: 30px 20px;
+    color: $text-color-primary;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 30px;
+    font-weight: 300;
+
+    & span {
+        color: $text-color-primary;
+        font-family: Gilroy;
+        font-size: 30px;
+        font-weight: 800;
+
+        @media (min-width: $bp-md) {
+            font-size: 52px;
+        }
+
+        @media (min-width: $bp-lg) {
+            font-size: 62px;
+        }
+    }
+
+    @media (min-width: $bp-md) {
+        padding: 30px;
+        font-size: 52px;
+    }
+
+    @media (min-width: $bp-lg) {
+        padding: 0 70px;
+        font-size: 62px;
+    }
+}
+
+.about__medias-container {
+    background: $background-color-about-me-section;
+    @include flex-gap(column,30px); 
+    padding: 40px 30px 40px 0;
+    align-items: flex-end;
+
+    @media (min-width: $bp-lg) {
+        padding: 60px 70px 60px 0;
+    }   
+}
+
+.about__text {
+    color: $text-color-white;
+    text-align: right;
+    font-family: Gilroy;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 28px; 
+    text-transform: uppercase;
+
+    @media (min-width: $bp-lg) {
+       color: $text-color-white;
+       text-align: right;
+       font-size: 232x;
+       font-weight: 400;
+       line-height: 32px; 
+       text-transform: uppercase;
+       }
+
+       @media (min-width: 1450px) {
+       width: 485px;
+       }
+}
+
+.networks-white {
+   
+    gap: 20px;
+    align-self: flex-end;
+
+    @media (min-width: $bp-md) {
+        align-self: flex-end;
+    }
+}
+
+.networks-white__item img {
+    width: 50px;
+    height: 50px;
+}
+

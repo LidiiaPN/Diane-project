@@ -1,0 +1,29 @@
+@mixin flex($fd: row, $jc: flex-start, $ai: flex-start) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin flex-gap($fd: row, $gp: 0) {
+    display: flex;
+    flex-direction: $fd;
+    gap: $gp;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin before-after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+}

@@ -1,0 +1,130 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.clients {
+    width: 100%;
+    margin: 0 auto;
+    @media (min-width: $bp-lg) {
+      max-width: 1290px;
+    }
+  }
+  .clients__title {
+    color: $text-color-primary;
+    font-family: Gilroy;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 150;
+    text-transform: uppercase;
+    @media (min-width: $bp-md) {
+      padding: 30px 30px;
+      font-size: 100px;
+      letter-spacing: 6px;
+    }
+
+    @media (min-width: $bp-lg) {
+        font-size: 200px;
+      }
+  }
+  .clients__container {
+    box-sizing: border-box;
+    padding: 0 30px;
+    @media (min-width: $bp-lg) {
+      padding: 20px 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(auto, 1fr);
+      justify-content: center;
+      align-items: stretch;
+    }
+  }
+  .clients__container-item {
+    padding: 40px 0;
+    @include flex-column;
+    gap: 30px;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+
+    @media (min-width: $bp-lg) {
+      padding: 30px;
+    }
+    &:nth-child(n + 2)::before {
+      width: 100%;
+      content: "";
+      position: absolute;
+      border-bottom: 1px solid $text-color-primary;
+      top: 0;
+      right: 0;
+      @media (min-width: $bp-lg) {
+        border-bottom: none;
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(5) {
+      @media (min-width: $bp-lg) {
+        border-right: 1px solid $text-color-primary;
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      @media (min-width: $bp-lg) {
+        border-bottom: 1px solid $text-color-primary;
+      }
+  
+      @media (min-width: $bp-lg) {
+        padding: 30px;
+      }
+    }
+  }
+  .clients__container-title {
+    color: $text-color-primary;
+    font-family: Gilroy;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 44px;
+    @media (min-width: $bp-md) {
+      font-size: 35px;
+    }
+    @media (min-width: $bp-lg) {
+      font-size: 38px;
+    }
+  }
+  .clients__container-descr {
+    font-family: "Inter";
+    color: $text-color-black;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  
+    .info__photo {
+      border-radius: 50px;
+    }
+    .info__data {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .info__speciality,
+    .info__name {
+      color: $text-color-black;
+      font-family: "Inter";
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+    .info__speciality {
+      font-weight: 400;
+    }
+  }
+  

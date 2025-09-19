@@ -1,0 +1,82 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.header {
+    background: $background-color-primary;
+    padding: 20px 20px 30px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+
+    @include flex-gap(column, 30px);
+    
+    @media (min-width: $bp-md) {
+    padding: 40px 30px 0;    
+    }
+
+    @media (min-width: $bp-lg) {
+    padding: 40px 70px 0;
+   }
+}
+
+.header__header-container {
+    @include flex(row, space-between, center);
+
+    @media (min-width: $bp-md) {
+        padding-bottom: 30px;
+    }
+} 
+
+.main-logo {
+    @include flex-gap (row, 10px);
+    align-items: center;
+    position: relative;
+    padding-right: 23px;    
+
+    & .main-logo__text {
+        display: none;        
+
+        @media (min-width: $bp-md) {
+            display: inline-block;
+            color: $text-color-black;
+            font-family: Gilroy;
+            font-size: 35px;
+            font-weight: 800;
+            letter-spacing: -0.7px;
+
+            & span {
+                color: $text-color-black;
+                font-family: Gilroy;
+                font-size: 35px;
+                font-weight: 400;
+                letter-spacing: -0.7px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &::after {
+
+        @media (min-width: $bp-md) {
+        content: '';
+        background-image: url("../../img/logos/registered.svg");
+        background-repeat: no-repeat;
+        width: 19px;
+        height: 21px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        }
+    }
+}
+
+.header__button {
+    color: $text-color-primary;
+    font-family: Gilroy;
+    font-size: 25px;
+    font-weight: 400;
+    background: none;
+}
+

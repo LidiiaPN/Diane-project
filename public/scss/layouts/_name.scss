@@ -1,0 +1,58 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.name {
+    background: $background-color-primary;
+    margin-top: 85px;
+    padding: 10px 20px 20px;
+    @include flex-gap(column, 30px);
+    align-items: center;
+    text-align: center;
+
+    @media (min-width: $bp-md) {
+        margin-top: 105px;
+        padding: 30px 30px 40px;
+    }
+
+    @media (min-width: $bp-lg) {
+        padding: 30px 70px 40px;
+    }
+}
+
+.name__title {
+    color: $text-color-primary;
+ font-family: Gilroy;
+    font-size: 57px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+   & span {
+    display: block;
+    color: $text-color-primary;
+    font-family: Gilroy;
+    font-size: 57px;
+    font-weight: 300;
+    text-transform: capitalize;
+
+    @media (min-width: $bp-md) {
+        font-size: 120px;
+    }
+
+    @media (min-width: $bp-lg) {
+        font-size: 150px;
+        }
+    }
+
+   @media (min-width: $bp-md) {
+       font-size: 120px;
+    }
+
+   @media (min-width: $bp-lg) {
+       font-size: 150px;
+   }
+}
+
+.header__arrow-down {
+    width: 25px;
+    height: 40px;
+}
