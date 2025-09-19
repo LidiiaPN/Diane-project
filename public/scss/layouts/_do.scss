@@ -29,10 +29,9 @@
     border-bottom: 1px solid $text-color-black;
     @include flex-column;
     justify-content: center;
-    background-image: url(/img/do.jpg);
+    background-image: url(./img/do.jpg);
    // background-image: url("../../img/do.jpg");
-   //background-image: url("../img/do.jpg");третій
-
+   //background-image: url("../img/do.jpg");
     background-repeat: no-repeat;
     background-size: 100% 478px;
     @media (min-width: $bp-md) {
